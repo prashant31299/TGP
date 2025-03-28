@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Replace the Google Maps script with your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA15wjJk5skwNfVbZ7BzlOpAlBsMtLeGhA"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Safety First</div>
+        <div class="nav-links">
+            <a href="#home" class="active" data-page="home"><i class="fas fa-home"></i> Home</a>
+            <a href="#map" data-page="map"><i class="fas fa-map-marked-alt"></i> Safety Map</a>
+            <a href="#community" data-page="community"><i class="fas fa-users"></i> Community</a>
+        </div>
+    </nav>
+
+    <div id="home" class="page active">
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> Women Safety App</h1>
+            <p class="app-description">Your personal safety companion. Press the SOS button in case of emergency or use voice detection for hands-free alerts.</p>
+            
+            <button id="sosButton" class="sos-button">SOS</button>
+            
+            <div id="location-info" class="location-info"></div>
+            
+            <div class="feature-section">
+                <h2>Voice Detection</h2>
+                <p>Activate voice detection to automatically trigger SOS when you say distress words like "help", "emergency", "stop", or "danger".</p>
+                <button id="startVoiceButton" class="voice-button">
+                    <i class="fas fa-microphone"></i> Start Voice Detection
+                </button>
+                <div id="voice-status" class="voice-status"></div>
+            </div>
+            
+            <div class="feature-section">
+                <h2>Emergency Contacts</h2>
+                <p>Add emergency contacts who will be notified when you trigger an SOS alert.</p>
+                <div class="contact-list" id="contactList">
+                    <!-- Contacts will be loaded here -->
+                </div>
+                <button id="addContactButton" class="voice-button">
+                    <i class="fas fa-plus"></i> Add Contact
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="page">
+        <div class="map-container">
+            <div id="google-map"></div>
+            <div class="map-controls">
+                <button id="markSafe" class="map-button safe"><i class="fas fa-check-circle"></i> Mark Safe Zone</button>
+                <button id="markUnsafe" class="map-button unsafe"><i class="fas fa-exclamation-triangle"></i> Mark Unsafe Zone</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="community" class="page">
+        <div class="container">
+            <h1><i class="fas fa-users"></i> Community Reports</h1>
+            <p class="app-description">Share and view safety reports from the community to stay informed about potential risks.</p>
+            
+            <div class="report-form">
+                <h2>Submit a Report</h2>
+                <input type="text" id="reportTitle" placeholder="Report Title">
+                <textarea id="reportDescription" placeholder="Describe the incident or safety concern..."></textarea>
+                <button id="submitReport" class="report-button"><i class="fas fa-paper-plane"></i> Submit Report</button>
+            </div>
+            
+            <h2>Recent Reports</h2>
+            <div id="reportsList" class="reports-list">
+                <!-- Reports will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Contact Modal -->
+    <div id="contactModal" class="modal">
+        <!-- Update the contact modal content -->
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Add Emergency Contact</h2>
+            <input type="text" id="contactName" placeholder="Contact Name">
+            <input type="tel" id="contactPhone" placeholder="Phone Number (with country code)">
+            <input type="text" id="contactFacebook" placeholder="Facebook Profile URL (optional)">
+            <input type="text" id="contactTwitter" placeholder="Twitter Handle (optional)">
+            <input type="text" id="contactInstagram" placeholder="Instagram Handle (optional)">
+            <button id="saveContact" class="report-button">Save Contact</button>
+        </div>
+    </div>
+
+    <!-- Replace your current Firebase scripts with these -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
