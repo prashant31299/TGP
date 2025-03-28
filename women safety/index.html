@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHer - Women Safety App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Added callback parameter to ensure map loads properly -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=Function.prototype"></script>
+</head>
+<body>
+    <header>
+        <h1>SafeHer</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#community">Community</a></li>
+                <!-- Added contact button -->
+                <li><a href="tel:112" class="emergency-call">Emergency Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="active-section">
+            <div class="sos-container">
+                <button id="sos-button">SOS</button>
+                <p>Press in case of emergency</p>
+            </div>
+            <div class="status-container">
+                <p id="status-message">You are safe</p>
+                <div id="status-indicator" class="safe"></div>
+            </div>
+            <!-- Added microphone permission button -->
+            <div class="mic-permission">
+                <button id="enable-mic">Enable Voice Detection</button>
+                <p id="mic-status">Voice detection is disabled</p>
+            </div>
+        </section>
+
+        <!-- Rest of the sections remain unchanged -->
+        <section id="map" class="section">
+            <h2>Live Tracking & Safe Zones</h2>
+            <div id="map-container"></div>
+            <div class="map-controls">
+                <button id="mark-safe">Mark as Safe</button>
+                <button id="mark-unsafe">Mark as Unsafe</button>
+                <button id="start-tracking">Start Tracking</button>
+                <button id="stop-tracking">Stop Tracking</button>
+            </div>
+        </section>
+
+        <section id="contacts" class="section">
+            <h2>Emergency Contacts</h2>
+            <div class="contacts-list" id="contacts-list">
+                <!-- Contacts will be loaded here -->
+            </div>
+            <div class="add-contact-form">
+                <h3>Add New Contact</h3>
+                <input type="text" id="contact-name" placeholder="Name">
+                <input type="tel" id="contact-phone" placeholder="WhatsApp Number">
+                <button id="add-contact">Add Contact</button>
+            </div>
+        </section>
+
+        <section id="community" class="section">
+            <h2>Community Reports</h2>
+            <div class="community-map" id="community-map"></div>
+            <div class="report-form">
+                <h3>Report a Location</h3>
+                <input type="text" id="location-name" placeholder="Location Name">
+                <select id="safety-rating">
+                    <option value="safe">Safe</option>
+                    <option value="caution">Caution</option>
+                    <option value="unsafe">Unsafe</option>
+                </select>
+                <textarea id="report-details" placeholder="Details about this location..."></textarea>
+                <button id="submit-report">Submit Report</button>
+            </div>
+            <div class="reports-list" id="reports-list">
+                <!-- Reports will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SafeHer - Women Safety App</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/threat-detection.js"></script>
+    <script src="db/database.js"></script>
+</body>
+</html>
