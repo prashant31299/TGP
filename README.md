@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Women Safety Web App 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
+This is a **smart security web application** designed to enhance women's safety by providing **instant SOS alerts, real-time tracking, AI-based threat detection, and community-driven safety insights**.
 
-## Available Scripts
+## 🎯 Features
+- ✅ **Instant SOS Alerts** – Send an emergency alert with real-time location to pre-saved contacts.
+- ✅ **Live Tracking** – Displays user’s real-time location on a Google Map.
+- ✅ **AI-Based Threat Detection** – Detects distress words via speech-to-text API.
+- ✅ **Community Reports** – Users can mark safe/unsafe places on a map.
+- ✅ **Panic Mode** – Shake phone or press a button multiple times to auto-trigger SOS.
 
-In the project directory, you can run:
+## 🛠 Tech Stack
+- **Frontend:** React.js (for UI & interactive components)
+- **Backend:** Node.js + Express.js (for API handling)
+- **Database:** Firebase (to store SOS alerts & reports)
+- **Location Tracking:** Google Maps API (for real-time tracking)
+- **AI Threat Detection:** Google ML Kit (for detecting distress words in voice)
 
-### `npm start`
+## 🚀 Installation & Setup
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/your-repo/women-safety-app.git
+cd women-safety-app
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3️⃣ Set Up Environment Variables
+Create a `.env` file and add your API keys:
+```
+REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+REACT_APP_FIREBASE_CONFIG=your_firebase_config
+REACT_APP_TWILIO_API_KEY=your_twilio_api_key
+```
 
-### `npm test`
+### 4️⃣ Run the App
+```sh
+npm start
+```
+The app will be available at **http://localhost:3000**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Usage
+1️⃣ **Press the SOS button** to send an emergency alert.
+2️⃣ **Enable live tracking** for real-time location updates.
+3️⃣ **Report unsafe locations** to help others stay informed.
+4️⃣ **Use voice detection** to trigger an automatic SOS if distress words are spoken.
 
-### `npm run build`
+## 🌍 Deployment
+To deploy the app, use **Vercel or Netlify**:
+```sh
+npm run build
+vercel deploy  # For Vercel
+netlify deploy # For Netlify
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Future Enhancements
+- 🔹 Smartwatch integration for **quick SOS triggers**
+- 🔹 AI-powered **facial recognition for threat detection**
+- 🔹 Chatbot for **emergency guidance**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📝 License
+This project is **open-source** under the MIT License.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+💡 **Contribute & Make a Difference!** If you'd like to contribute, feel free to **fork the repo** and submit a PR. Let's make the world a safer place! ✨
